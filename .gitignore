@@ -8,7 +8,9 @@ node_modules
 dist
 .DS_Store
 
+# Added By Me
 .npmrc
 package-lock.json
 tsconfig.json
 .vscode
+*.pem
