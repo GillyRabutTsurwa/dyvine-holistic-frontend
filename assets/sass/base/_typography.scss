@@ -1,0 +1,81 @@
+@use "../abstracts/" as abstracts;
+%heading {
+    font-family: abstracts.$primaryFontStack;
+    font-weight: 400;
+}
+
+.heading-1 {
+    @extend %heading;
+    font-size: 4.5rem;
+    color: abstracts.$colour-grey-light-1;
+    line-height: 1;
+}
+
+.heading-2 {
+    @extend %heading;
+    font-size: 4rem;
+    font-style: italic;
+    line-height: 1;
+
+    &--light {
+        color: abstracts.$colour-grey-light-1;
+    }
+
+    &--dark {
+        color: abstracts.$colour-grey-dark-1;
+    }
+}
+
+.heading-3 {
+    @extend %heading;
+    font-size: 1.6rem;
+    color: abstracts.$colour-primary;
+    text-transform: uppercase;
+}
+
+.heading-4 {
+    @extend %heading;
+    font-size: 1.9rem;
+
+    &--light {
+        color: abstracts.$colour-grey-light-1;
+    }
+
+    &--dark {
+        color: abstracts.$colour-grey-dark-1;
+    }
+}
+
+.btn {
+    background-color: abstracts.$colour-primary;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    font-family: abstracts.$primaryFontStack;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1.8rem 3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: abstracts.$colour-primary-dark;
+    }
+}
+
+// Think of creating a utilities file for code below
+.mb-small {
+    margin-bottom: 2rem;
+}
+
+.mb-medium {
+    margin-bottom: 4rem;
+}
+
+.mb-large {
+    margin-bottom: 6rem;
+}
+
+.mb-huge {
+    margin-bottom: 8rem;
+}

@@ -1,0 +1,57 @@
+@use "../abstracts/" as abstracts;
+// ::-moz-selection {
+//     background-color: abstracts.$steelblue;
+//     color: abstracts.$default-grey;
+// }
+// ::selection {
+//     background-color: abstracts.$steelblue;
+//     color: abstracts.$default-grey;
+// }
+
+html {
+    font-size: 62.5%; // 1rem = 10px(desired px definition); 10px/16px = 62.5%;
+
+    @include abstracts.breakpoint(1023) {
+        font-size: 56.25%; // 1rem = 9px; 9px/16px = 56.25%;
+    }
+
+    @include abstracts.breakpoint(767) {
+        font-size: 50%; // 1rem = 8px; 9px/16px = 56.25%;
+    }
+
+    @include abstracts.breakpoint(480) {
+        font-size: 45%;
+    }
+}
+
+body {
+    font-family: abstracts.$primaryFontStack;
+    color: abstracts.$colour-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.not-a-tailwind-container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    /*
+        Ce qu'on veut
+        1st row 80vh
+        2nd row according to smallest amount of available content ie. min-content
+            Good definition of min-content: the smallest width of a box where the box's contents don't overflow the box itself.
+
+        3rd row according to viewport width
+        4th 5th and 6th rows = min-content
+    */
+    grid-template-rows: 80vh 40vw repeat(4, -webkit-min-content);
+    grid-template-rows: 80vh 40vw repeat(4, min-content);
+
+    grid-template-columns:
+        [full-start] minmax(6rem, 1fr) [centre-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end])
+        [centre-end] minmax(6rem, 1fr) [full-end];
+
+    grid-template-columns:
+        [full-start] minmax(6rem, 1fr) [centre-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+        [centre-end] minmax(6rem, 1fr) [full-end];
+}
