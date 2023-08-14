@@ -13,7 +13,7 @@
 
     <div class="story__pictures">
       <img src="@/assets/images/story-1.jpeg" alt="Couple" class="story__img--1">
-      <img src="@/assets/images/story-2.jpeg" alt="New House" class="story__img--2">
+      <!-- <img src="@/assets/images/story-2.jpeg" alt="New House" class="story__img--2"> -->
     </div>
 
     <div class="story__content">
@@ -96,22 +96,8 @@
       </div>
     </section>
 
-    <!-- <div class="story__pictures">
-      <img src="@/assets/images/story-1.jpeg" alt="Couple" class="story__img--1">
-      <img src="@/assets/images/story-2.jpeg" alt="New House" class="story__img--2">
-    </div>
-
-    <div class="story__content">
-      <h3 class="heading-3 mb-small">Happy Customers</h3>
-      <h2 class="heading-2 heading-2--dark mb-medium">&ldquo;The best decision of our lives&rdquo;</h2>
-      <p class="story__text mb-large">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur
-        voluptatibus. Quidem consequatur harum volupta!
-      </p>
-      <button class="btn">Find your own home</button>
-    </div> -->
-
     <section class="homes">
+      <h2>Services</h2>
       <div class="home">
         <img src="@/assets/images/house-1.jpeg" alt="House" class="home__img">
         <svg class="home__like">
@@ -381,8 +367,8 @@
 <style lang="scss">
 // NOTE: HEADER STYLES
 .header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba($colour-secondary, 0.93)), to(rgba($colour-secondary, 0.93))), url(@/assets/@/assets/images/hero.jpeg);
-  background-image: linear-gradient(rgba($colour-secondary, 0.93), rgba($colour-secondary, 0.93)), url(@/assets/@/assets/images/hero.jpeg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba($colour-secondary, 0.93)), to(rgba($colour-secondary, 0.93))), url(@/assets/images/hero.jpeg);
+  background-image: linear-gradient(rgba($colour-secondary, 0.93), rgba($colour-secondary, 0.93)), url(@/assets/images/hero.jpeg);
   background-size: cover;
   background-position: center;
   grid-column: full-start / col-end 6;
@@ -468,8 +454,8 @@
   &__pictures {
     background-color: $colour-primary;
     grid-column: full-start / col-end 4;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba($colour-primary, 0.5)), to(rgba($colour-primary, 0.5))), url(@/assets/@/assets/images/back.jpg);
-    background-image: linear-gradient(rgba($colour-primary, 0.5), rgba($colour-primary, 0.5)), url(@/assets/@/assets/images/back.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba($colour-primary, 0.5)), to(rgba($colour-primary, 0.5))), url(https://source.unsplash.com/random/?hospital);
+    background-image: linear-gradient(rgba($colour-primary, 0.5), rgba($colour-primary, 0.5)), url(https://source.unsplash.com/random/?hospital);
 
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -482,20 +468,20 @@
   &__img--1 {
     width: 100%;
     grid-column: 2 / 6;
-    grid-row: 2 / 6;
+    grid-row: 1 / 6;
     -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
   }
 
-  &__img--2 {
-    grid-column: 4 / 7;
-    grid-row: 4 / 6;
-    width: 115%;
-    z-index: 100;
-    -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  // &__img--2 {
+  //   grid-column: 4 / 7;
+  //   grid-row: 4 / 6;
+  //   width: 115%;
+  //   z-index: 100;
+  //   -webkit-box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  //   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 
-  }
+  // }
 
   &__content {
     background-color: $colour-grey-light-1;
@@ -532,6 +518,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem;
+
+  h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
 }
 
 .home {
