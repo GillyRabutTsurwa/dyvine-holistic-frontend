@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    // modules: ["@nuxtjs/tailwindcss"],
+    modules: ["@nuxtjs/google-fonts"],
     vite: {
         css: {
             preprocessorOptions: {
@@ -19,4 +19,18 @@ export default defineNuxtConfig({
         },
     },
     css: ["@/assets/sass/main.scss"],
+    googleFonts: {
+        display: "swap",
+        preconnect: true,
+        families: {
+            Abel: true,
+            "League+Spartan": {
+                wght: [200, 300, 400, 600, 700],
+            },
+            "Lexend+Deca": {
+                wght: [100, 300, 400, 500],
+            },
+            "Kulim+Park": true,
+        },
+    },
 });
