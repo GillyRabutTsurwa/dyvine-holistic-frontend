@@ -14,3 +14,5 @@ package-lock.json
 tsconfig.json
 .vscode
 *.pem
+# Local Netlify folder
+.netlify
