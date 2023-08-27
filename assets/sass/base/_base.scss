@@ -44,8 +44,10 @@ body {
         3rd row according to viewport width
         4th 5th and 6th rows = min-content
     */
-    grid-template-rows: 80vh 40vw repeat(4, -webkit-min-content);
-    grid-template-rows: 80vh 40vw repeat(4, min-content);
+    // grid-template-rows: 80vh 40vw repeat(4, -webkit-min-content);
+    // grid-template-rows: 80vh 40vw repeat(4, min-content);
+    grid-template-rows: 80vh 40vw 40vw repeat(5, -webkit-min-content);
+    grid-template-rows: 80vh 40vw 40vw repeat(5, min-content);
 
     grid-template-columns:
         [full-start] minmax(6rem, 1fr) [centre-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end])

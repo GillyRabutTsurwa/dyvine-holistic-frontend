@@ -6,19 +6,10 @@
     <img src="@/assets/images/svg/logo.svg" alt="Nexter logo" class="header__logo">
     <ul class="navigation__list">
       <li class="navigation__list--item">
-        <NuxtLink to="/blog">Blogs</NuxtLink>
+        <NuxtLink to="https://www.facebook.com/profile.php?id=100090280427401" target="_blank">Facebook</NuxtLink>
       </li>
       <li class="navigation__list--item">
-        <NuxtLink to="/blog/authours/gilbert-rabut-tsurwa">About Me</NuxtLink>
-      </li>
-      <li class="navigation__list--item">
-        <NuxtLink to="/blog/uncensored">Uncensored Posts</NuxtLink>
-      </li>
-      <li class="navigation__list--item">
-        <NuxtLink to="/shop" target="_blank" rel="noreferrer noopener">Shop</NuxtLink>
-      </li>
-      <li class="navigation__list--item">
-        <NuxtLink to="/contact">Contact Me</NuxtLink>
+        <NuxtLink to="/contact">Contact Us</NuxtLink>
       </li>
     </ul>
     <ul class="navigation__list">

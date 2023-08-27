@@ -2,15 +2,25 @@
 <template>
     <footer class="footer">
         <ul class="nav">
-            <li class="nav__item"><a href="#" class="nav__link">Find your dream home</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Request Proposal</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Download home planner</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Contact us</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Submit your property</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Come work with us</a></li>
+            <li class="nav__item">
+                <NuxtLink to="#" class="nav__link">Schedule An Appointment</NuxtLink>
+            </li>
+            <li class="nav__item">
+                <NuxtLink to="/contact" class="nav__link">Contact us</NuxtLink>
+            </li>
+            <li class="nav__item">
+                <NuxtLink to="https://www.facebook.com/profile.php?id=100090280427401" target="_blank" class="nav__link">
+                    Facebook (Follow Us)
+                </NuxtLink>
+            </li>
+            <li class="nav__item">
+                <NuxtLink to="#" class="nav__link">Come work with us</NuxtLink>
+            </li>
         </ul>
         <div class="copyright">
-            &copy; Copyright 2017 by <span>Gilbert Rabut Tsurwa</span>. All rights reserved.
+            &copy; Copyright 2023 by <span>
+                <NuxtLink to="https://gilbertrabuttsurwa.com" target="_blank">Gilbert Rabut Tsurwa</NuxtLink>
+            </span>. All rights reserved.
         </div>
     </footer>
 </template>
@@ -74,6 +84,11 @@
     & span {
         text-transform: uppercase;
         font-weight: bold;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
 }
 </style>

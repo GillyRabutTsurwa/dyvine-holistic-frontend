@@ -2,8 +2,9 @@
 
 <template>
   <div>
-    Layout: default
+    <Navigation />
     <slot />
+    <Footer />
   </div>
 </template>
 

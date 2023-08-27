@@ -1,10 +1,15 @@
 <script setup lang="ts"></script>
 <template>
-    <div class="box">
-        <div class="box__content">
+    <div class="boite">
+        <div class="boite__pictures">
+            <img src="@/assets/images/story-1.jpeg" alt="Couple" class="story__img--1">
+            <!-- <img src="@/assets/images/story-2.jpeg" alt="New House" class="story__img--2"> -->
+        </div>
+
+        <div class="boite__content">
             <h3 class="heading-3 mb-small">About Dyvine</h3>
             <h2 class="heading-2 heading-2--dark mb-medium">Our Mission</h2>
-            <p class="box__text mb-large">
+            <p class="boite__text mb-large">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, exercitationem non similique amet aut
                 laudantium enim soluta beatae, voluptatibus debitis labore rem omnis natus, inventore doloribus vitae
                 repudiandae
@@ -22,68 +27,36 @@
     </div>
 </template>
 
-
 <style lang="scss">
-// NOTE: realtor styles
-.box {
+.boite {
     height: 100%;
     grid-column: full-start / full-end; //NOTE: these styles must NOT be scoped for this line to work
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &>* {
+        grid-row: 1 / -1;
+
+    }
+
+    &__pictures {
+        grid-column: 2 / 3;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
     &__content {
-        grid-column: 1 / -1;
-        background-color: $colour-grey-light-1;
-        grid-column: col-start 5 / full-end;
+        grid-column: 1 / 2;
+        align-self: center;
+        padding: 0 3rem;
 
-        padding: 6rem 8vw;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-
-        h3,
-        h2 {
-            margin: 0 auto;
+        p {
+            font-size: 2.5rem;
         }
-
-        h2 {
-            margin-bottom: 3rem;
-        }
-
-        .btn {
-            margin: 0 auto;
-        }
-    }
-
-    // NOTE: child of box__content. will nest later
-    &__text {
-        font-size: 3.5rem;
-        // font-style: italic;
-        margin-bottom: 4rem;
-    }
-
-}
-
-.realtors {
-    background-color: $colour-secondary;
-    grid-column: col-start 7 / full-end;
-    height: 100%;
-
-
-    &__img {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
     }
 }
 </style>
