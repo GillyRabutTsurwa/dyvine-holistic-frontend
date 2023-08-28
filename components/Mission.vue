@@ -69,6 +69,7 @@
         font-size: 3.5rem;
         // font-style: italic;
         margin-bottom: 4rem;
+        text-align: justify;
     }
 
 }

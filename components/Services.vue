@@ -4,7 +4,7 @@
 
 <template>
     <section class="homes">
-        <h2>Services</h2>
+        <h2 class="heading-2 heading-2--dark mb-medium">Services</h2>
         <div class="home">
             <img src="@/assets/images/house-1.jpeg" alt="House" class="home__img">
             <svg class="home__like">
@@ -214,7 +214,7 @@
 //NOTE: home
 .homes {
     grid-column: centre-start / centre-end;
-    margin: 15rem 0;
+    margin-bottom: 15rem;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));

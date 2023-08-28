@@ -2,8 +2,9 @@
 
 <template>
   <nav class="navigation">
-    <!-- <LogoX /> -->
-    <img src="@/assets/images/svg/logo.svg" alt="Nexter logo" class="header__logo">
+    <NuxtLink to="/">
+      <img src="@/assets/images/svg/logo.svg" alt="Nexter logo" class="header__logo">
+    </NuxtLink>
     <ul class="navigation__list">
       <li class="navigation__list--item">
         <NuxtLink to="https://www.facebook.com/profile.php?id=100090280427401" target="_blank">Facebook</NuxtLink>
@@ -29,7 +30,7 @@
   height: 10vh;
   background-color: #f0f0f0;
   padding: 0 1.75rem;
-  background-color: $colour-primary;
+  background-color: $colour-secondary;
 
   @include breakpoint(480) {
     height: 17.5rem;

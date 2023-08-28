@@ -1,9 +1,16 @@
 <script setup lang="ts">
+const route = useRoute();
 
+const basicFormStyle = computed(() => {
+    return {
+        'index-styles': route.name === "index",
+        'contact-styles': route.name === "contact"
+    }
+})
 </script>
 
 <template>
-    <div class="form-container">
+    <div :class="basicFormStyle" class="form-container">
         <h4 class="form-title">Contact Form</h4>
         <p class="form-text">Use this form to reach out to us, and we'll get back to you as soon as we can.
         </p>
@@ -19,8 +26,6 @@
 
 <style scoped lang="scss">
 .form-container {
-    grid-column: centre-start / centre-end;
-    width: 80%;
     margin: 4rem auto;
 
     .form-title {
@@ -63,5 +68,14 @@
         align-self: center;
         font-size: 1.6rem;
     }
+}
+
+.index-styles {
+    grid-column: centre-start / centre-end;
+    width: 80%;
+}
+
+.contact-styles {
+    width: 60%;
 }
 </style>

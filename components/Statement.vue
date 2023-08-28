@@ -50,12 +50,17 @@
     }
 
     &__content {
+        display: grid;
         grid-column: 1 / 2;
         align-self: center;
         padding: 0 3rem;
 
         p {
             font-size: 2.5rem;
+        }
+
+        .btn {
+            justify-self: center;
         }
     }
 }
